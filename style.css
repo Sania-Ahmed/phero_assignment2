@@ -22,7 +22,7 @@ common styling starts from here
 /* creating a common style container named .wrapper, which will be added to all the elements as class , to ease out the styling */
 .wrapper {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1220px;
     /* here this property will allow the elements have the width 1920 px when they have enough space, unless they will take 100% width  */
     margin: 0 auto;
 }
@@ -107,6 +107,7 @@ nav>ul>li a {
     font-weight: 700;
     font-size: 64px;
     color: var(--bold-txt-color);
+    margin-bottom:1em;
 }
 
 .banner-img>img {
@@ -151,4 +152,128 @@ nav>ul>li a {
 }
 .about-span-2{
     color: var(--primary-color);
+}
+/* feature section styles starts here */
+.feature-sec{
+    margin-top: 5rem;
+}
+.feature-area{
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+.feature-txt{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px;
+}
+
+.feature-header{
+    padding: 5px;
+}
+.feature-header>h2{
+    margin-top: 10px;
+    border-left: 5px solid var(--primary-color);
+    border-radius:5px;
+}
+.feature-header>p{
+    padding:5px;
+    margin-top: 10px;
+}
+.feature-list{
+    padding: 10px;
+}
+.feature-list>h3, .feature-list>p {
+    padding-bottom: 10px;
+}
+.feature-img-sec{
+    width: 50%;
+}
+.feature-img> img{
+    width: 100%;
+}
+.feature-img-tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 100px;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    font-size: 20px;
+    padding: 5px;    
+    border-radius: 5px;
+    position: relative;
+    top:-9%;
+    left: -15%;
+}
+/* fact sec styles starts here */
+.fact-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.fact-text{
+    width: 50%;
+    padding: 25px;
+}
+.fact-text>h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+.fact-text>p{
+    padding: 5px;
+}
+.fact-img{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fact-icon-1,
+.fact-icon-2,
+.fact-icon-3,
+.fact-icon-4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* sponsor section styles starts here */
+.sponsor-txt{
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+}
+.sponsor-logo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 10px;
+    margin-bottom: 6rem;
+}
+.logo>img{
+    filter: grayscale(1);
+    width: 100%;
+}
+/* footer styles starts here */
+footer{
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
 }
