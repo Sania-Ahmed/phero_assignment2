@@ -22,7 +22,7 @@ common styling starts from here
 /* creating a common style container named .wrapper, which will be added to all the elements as class , to ease out the styling */
 .wrapper {
     width: 100%;
-    max-width: 1220px;
+    max-width: 1100px;
     /* here this property will allow the elements have the width 1920 px when they have enough space, unless they will take 100% width  */
     margin: 0 auto;
 }
@@ -31,9 +31,9 @@ common styling starts from here
 .primary-btn {
     background-color: var(--primary-color);
     color: var(--tertiary-color);
-    padding: 5px 10px;
-    width: 131px;
-    font-size: 20px;
+    padding: 10px 10px;
+    width: 140px;
+    font-size: 18px;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -44,8 +44,6 @@ common styling starts from here
     font-weight: 400;
     font-size: 16px;
     color: var(--small-txt-color);
-    padding: 5px;
-    margin: 1rem;
 }
 
 /*------------------------------
@@ -101,7 +99,8 @@ nav>ul>li a {
 .banner-txt {
     text-align: center;
     margin: 5rem 4rem 1.5rem 4rem;
-    
+    padding: 10px;
+
 }
 
 .banner-title {
@@ -112,4 +111,44 @@ nav>ul>li a {
 
 .banner-img>img {
     width: 100%;
+}
+
+/* about section's styles starts here */
+.about-sec {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.about-img {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+.about-img>img {
+    width: 100%;
+}
+
+.about-txt {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.about-txt>h3 {
+    font-weight: 500;
+    font-size: 45px;
+}
+.about-span-1{
+    color: var(--small-txt-color);
+}
+.about-span-2{
+    color: var(--primary-color);
 }
