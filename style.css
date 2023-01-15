@@ -40,11 +40,26 @@ common styling starts from here
     margin-bottom: 2rem;
 }
 
+.primary-btn:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    transition: 1s ease-in-out;
+}
+
 .info-txt {
     font-weight: 400;
     font-size: 16px;
     color: var(--small-txt-color);
 }
+
+.bold-txt {
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--bold-txt-color);
+}
+
+
 
 /*------------------------------
  individual stylings starts here
@@ -76,15 +91,23 @@ nav>ul {
 }
 
 nav>ul>li {
-    padding: 5px;
     margin: 5px;
 }
 
 nav>ul>li a {
+    padding: 5px;
     text-decoration: none;
     color: var(--small-txt-color);
     font-weight: 500;
     font-size: 18px;
+}
+
+nav>ul>li a:hover {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    transition: 1s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px var(--small-txt-color);
 }
 
 /* banner styles starts here */
@@ -100,6 +123,11 @@ nav>ul>li a {
     text-align: center;
     margin: 5rem 4rem 1.5rem 4rem;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
 }
 
@@ -107,7 +135,12 @@ nav>ul>li a {
     font-weight: 700;
     font-size: 64px;
     color: var(--bold-txt-color);
-    margin-bottom:1em;
+    margin-bottom: 1em;
+    width: 50%;
+}
+
+.banner-img {
+    width: 50%;
 }
 
 .banner-img>img {
@@ -147,54 +180,71 @@ nav>ul>li a {
     font-weight: 500;
     font-size: 45px;
 }
-.about-span-1{
+
+.about-span-1 {
     color: var(--small-txt-color);
 }
-.about-span-2{
+
+.about-span-2 {
     color: var(--primary-color);
 }
+
 /* feature section styles starts here */
-.feature-sec{
+.feature-sec {
     margin-top: 5rem;
 }
-.feature-area{
+
+.feature-area {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 4rem;
 }
-.feature-txt{
-    width:50%;
+
+.feature-txt {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 20px;
 }
 
-.feature-header{
+.feature-header {
     padding: 5px;
 }
-.feature-header>h2{
+
+.feature-header>h2 {
     margin-top: 10px;
     border-left: 5px solid var(--primary-color);
-    border-radius:5px;
+    border-radius: 5px;
 }
-.feature-header>p{
-    padding:5px;
+
+.feature-header>p {
+    padding: 5px;
     margin-top: 10px;
 }
-.feature-list{
+
+.feature-list {
     padding: 10px;
+    box-shadow: 5px 5px 5px var(--small-txt-color);
+    border-radius: 5px;
 }
-.feature-list>h3, .feature-list>p {
+
+.feature-list>h3,
+.feature-list>p {
     padding-bottom: 10px;
 }
-.feature-img-sec{
+
+.feature-img-sec {
     width: 50%;
+    position: relative;
 }
-.feature-img> img{
+
+.feature-img>img {
     width: 100%;
 }
-.feature-img-tag{
+
+.feature-img-tag {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,40 +253,45 @@ nav>ul>li a {
     background-color: var(--primary-color);
     color: var(--tertiary-color);
     font-size: 20px;
-    padding: 5px;    
+    padding: 5px;
     border-radius: 5px;
-    position: relative;
-    top:-9%;
-    left: -15%;
+    position: absolute;
+    top: 90%;
+    left: 0;
 }
+
 /* fact sec styles starts here */
-.fact-sec{
+.fact-sec {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-top: 3em;
 }
-.fact-text{
+
+.fact-text {
     width: 50%;
     padding: 25px;
 }
-.fact-text>h3{
-    font-size: 30px;
-    font-weight: 700;
+
+.fact-text>h3 {
     margin-top: 4rem;
     margin-bottom: 1rem;
 }
-.fact-text>p{
+
+.fact-text>p {
     padding: 5px;
 }
-.fact-img{
+
+.fact-img {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .fact-icon-1,
 .fact-icon-2,
 .fact-icon-3,
-.fact-icon-4{
+.fact-icon-4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -248,8 +303,87 @@ nav>ul>li a {
     padding: 5px;
     border-radius: 5px;
 }
+
+.fact-icon-1:hover,
+.fact-icon-2:hover,
+.fact-icon-3:hover,
+.fact-icon-4:hover {
+    transform: scale(1.2);
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px var(--small-txt-color);
+}
+
+/* feedback section styles goes here */
+.feedback-area {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feedback-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-title>h2 {
+    border-bottom: 3px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.feedback-comment-sec {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.feedback-comment-area:hover {
+    background-color: var(--tertiary-color);
+    transition: 1s ease-out;
+    transform: scale(0.8);
+
+}
+
+.feedback-comment-area {
+    width: 80%;
+    background-color: var(--primary-color);
+    box-shadow: 10px 10px 10px var(--small-txt-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    margin: 1rem;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.feedback-comment {
+    width: 90%;
+}
+
+.feedback-comment>h3 {
+    color: var(--tertiary-color);
+    margin-bottom: 5px;
+}
+
+.feedback-img {
+    width: 10%;
+}
+
+.feedback-img>img {
+    width: 100%;
+}
+
+.feedback-comment-sec-1,
+.feedback-comment-sec-3 {
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* sponsor section styles starts here */
-.sponsor-txt{
+.sponsor-txt {
     margin-top: 6rem;
     display: flex;
     flex-direction: column;
@@ -258,7 +392,8 @@ nav>ul>li a {
     gap: 10px;
     padding: 5px;
 }
-.sponsor-logo{
+
+.sponsor-logo {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -266,14 +401,197 @@ nav>ul>li a {
     padding: 10px;
     margin-bottom: 6rem;
 }
-.logo>img{
+
+.logo>img {
     filter: grayscale(1);
     width: 100%;
 }
+
 /* footer styles starts here */
-footer{
+footer {
     background-color: var(--secondary-color);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    margin: 0;
     border-radius: 5px;
 }
+
+.login-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 2rem;
+}
+
+.login-txt {
+    font-size: 35px;
+    width: 50%;
+}
+
+.login-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form>form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.login-form>form>input[type=email],
+.login-form>form>input[type=password] {
+    background: transparent;
+    color: var(--primary-color);
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.login-form>form>input:focus {
+    outline: none;
+}
+
+/* ------------------------
+   media query starts hare
+ ---------------------------*/
+
+@media only screen and (max-width:688px) {
+
+    /* commonstyles are given first */
+    .wrapper {
+        max-width: 688px;
+        width: 100%;
+    }
+
+    .phone-txt {
+        font-size: 1em;
+    }
+
+    .c {
+        font-size: 14px;
+    }
+
+    .phone-width {
+        width: 100%;
+    }
+
+    nav,
+    nav>ul,
+    .about-sec,
+    .fact-sec,
+    .fact-img {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* ------------------------ */
+    nav>ul>li>a {
+        margin-bottom: 2em;
+    }
+
+    .banner-title {
+        margin-top: 2em;
+        font-size: 50px;
+    }
+
+    .banner-img {
+        object-fit: cover;
+    }
+
+    .about-img {
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        padding: 10px;
+    }
+
+    .feature-img {
+        padding: 10px;
+    }
+
+    .feature-area {
+        flex-direction: column
+    }
+
+    .fact-icon-1,
+    .fact-icon-2,
+    .fact-icon-3,
+    .fact-icon-4 {
+        width: 60%;
+        margin-bottom: 1em;
+    }
+
+    .fact-icon-1:hover,
+    .fact-icon-2:hover,
+    .fact-icon-3:hover,
+    .fact-icon-4:hover {
+        background-color: var(--primary-color);
+    }
+
+    .feedback-img {
+        width: 40%;
+    }
+
+    .sponsor-txt {
+        padding: 1em;
+        text-align: center;
+    }
+
+    .sponsor-logo {
+        flex-direction: column;
+        align-content: space-around;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .login-sec {
+        margin: 0;
+    }
+
+    .login-txt {
+        width: 70%;
+        text-align: center;
+    }
+
+    .login-form {
+        margin: 2em 0 2em 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-form>form>input {
+        margin: 1em;
+    }
+}
+
+/* ---------------------
+------------------------ */
+/* ---------------------
+  checklist of assignment
+  
+  *create website according to the design--check
+  *make it mobile responsive to get extra points--check
+  *add hover affect to a section, named facts to get extra points--check
+  *position a tag over a image to get extra points -- check
+  *creat an extra section to get bonus marks-- check
+  *align images vertically--check
+
+  ##added extra footer with log in form and a feedback section
+  ##added hover effect in menu
+  ## added transition to fact-section
+  ## added hover effect in buttons
+  ##  made the website responsive for mobile.
+  ----------------------- */
